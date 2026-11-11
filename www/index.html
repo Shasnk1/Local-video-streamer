@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Library</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>🎬 My Movie Library</h1>
+        <div class="network-info">
+            <span class="label">Connect from another device:</span>
+            <a class="ip-link" id="ipLink" href="#">loading...</a>
+            <!-- <span class="port">:8080</span> -->
+        </div>
+        <div class="movie-count" id="movieCount">0 movies</div>
+    </header>
+
+    <main>
+        <div class="grid" id="grid">
+            <div class="empty">No movies found. Add video files to the movies folder.</div>
+        </div>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>

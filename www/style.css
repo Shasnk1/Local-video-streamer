@@ -1,0 +1,108 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #0f1419;
+    color: #e6e6e6;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 2rem;
+    border-bottom: 2px solid #e94560;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.network-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-size: 1rem;
+}
+
+.label { color: #aaa; }
+
+.ip-link {
+    background: #e94560;
+    color: #fff;
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: monospace;
+    transition: background 0.2s;
+}
+
+.ip-link:hover { background: #ff5470; }
+
+.port { color: #aaa; font-family: monospace; }
+
+.movie-count {
+    margin-top: 1rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #1a1a2e;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #2a2a44;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    background: #0f1419;
+}
+
+.card .info { padding: 1rem; }
+
+.card .title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card .year { color: #888; font-size: 0.85rem; }
+
+.empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #666;
+    padding: 3rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+    header { padding: 1rem; }
+    header h1 { font-size: 1.4rem; }
+    .ip-link { font-size: 0.85rem; padding: 0.25rem 0.6rem; }
+}
